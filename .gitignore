@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+data/
+.venv/
+*.log
+HISTORICO_GIT.bundle
+HISTORICO_GIT.txt

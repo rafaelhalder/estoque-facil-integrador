@@ -1,0 +1,121 @@
+%% Os diagramas abaixo correspondem à versão implementada.
+%% Cole cada bloco separadamente em um renderizador Mermaid.
+
+%% Casos de uso (representação dos fluxos de um operador)
+flowchart LR
+    O[Operador] --- C([Cadastrar e editar produtos])
+    O --- M([Registrar entrada ou saída])
+    O --- S([Consultar saldo e reposição])
+    O --- H([Consultar histórico])
+    O --- E([Exportar catálogo])
+    O --- A([Arquivar produto sem saldo])
+
+%% Arquitetura
+flowchart LR
+    UI[View HTML CSS JavaScript] -->|HTTP JSON| C[Controller Handler]
+    C --> S[InventoryService]
+    S --> M[Database e ProductRepository]
+    M --> DB[(SQLite)]
+    DB --> M --> S --> C --> UI
+
+%% Classes
+classDiagram
+    class Handler {
+      do_GET()
+      do_POST()
+      do_PUT()
+      do_DELETE()
+    }
+    class InventoryService {
+      snapshot()
+      create_product(data)
+      update_product(id,data)
+      archive_product(id,data)
+      move(data)
+    }
+    class Database {
+      path
+      initialize()
+      connect(write)
+      seed_demo()
+    }
+    class ProductRepository {
+      list()
+      movements()
+    }
+    Handler --> InventoryService
+    InventoryService --> Database
+    InventoryService --> ProductRepository
+    ProductRepository --> Database
+
+%% Entidades
+erDiagram
+    PRODUCTS ||--o{ MOVEMENTS : possui
+    PRODUCTS {
+      integer id PK
+      text sku UK
+      text name
+      text category
+      text unit
+      integer price_cents
+      integer min_stock
+      integer stock
+      integer active
+      integer version
+      text created_at
+      text updated_at
+    }
+    MOVEMENTS {
+      integer id PK
+      integer product_id FK
+      text kind
+      integer quantity
+      text note
+      integer balance_after
+      text created_at
+    }
+    SETTINGS {
+      text key PK
+      text value
+    }
+
+%% Sequência de saída
+sequenceDiagram
+    actor Operador
+    participant View
+    participant Handler
+    participant Service as InventoryService
+    participant DB as SQLite
+    Operador->>View: Informar produto e quantidade
+    View->>Handler: POST /api/movements
+    Handler->>Service: move(data)
+    Service->>DB: BEGIN IMMEDIATE e consultar produto
+    alt Saldo insuficiente
+      DB-->>Service: Saldo atual
+      Service->>DB: ROLLBACK
+      Service-->>Handler: AppError 409
+      Handler-->>View: JSON com mensagem
+      View-->>Operador: Exibir erro sem alterar saldo
+    else Saldo suficiente
+      Service->>DB: UPDATE products e INSERT movements
+      Service->>DB: COMMIT
+      Service-->>Handler: Movimentação criada
+      Handler-->>View: 201 JSON
+      View->>Handler: GET /api/state
+      View-->>Operador: Atualizar saldo e histórico
+    end
+
+%% Atividade
+flowchart TD
+    A([Início]) --> B[Receber movimentação]
+    B --> C{Campos válidos?}
+    C -->|Não| E[Informar erro]
+    C -->|Sim| D[Abrir transação e buscar produto]
+    D --> F{Produto ativo e saldo permitido?}
+    F -->|Não| G[Rollback e mensagem]
+    F -->|Sim| H[Atualizar saldo e inserir histórico]
+    H --> I[Commit]
+    I --> J[Atualizar interface]
+    E --> K([Fim])
+    G --> K
+    J --> K

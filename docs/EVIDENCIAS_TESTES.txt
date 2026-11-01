@@ -1,0 +1,37 @@
+Estoque Fácil - evidência de execução automatizada
+Data: 2026-11-01T09:41:07-03:00
+Python: 3.12.10
+Plataforma: Windows-11-10.0.26300-SP0
+Comando: python -m unittest discover -s tests -v
+
+test_api_roundtrip (test_http.HttpTests.test_api_roundtrip) ... ok
+test_bad_json_and_content_type (test_http.HttpTests.test_bad_json_and_content_type) ... ok
+test_cross_origin_and_host_blocked (test_http.HttpTests.test_cross_origin_and_host_blocked) ... ok
+test_csv_utf8_and_formula_escape (test_http.HttpTests.test_csv_utf8_and_formula_escape) ... ok
+test_duplicate_and_insufficient_return_409 (test_http.HttpTests.test_duplicate_and_insufficient_return_409) ... ok
+test_external_document_navigation_allowed_but_api_is_blocked (test_http.HttpTests.test_external_document_navigation_allowed_but_api_is_blocked) ... ok
+test_static_assets_and_security_headers (test_http.HttpTests.test_static_assets_and_security_headers) ... ok
+test_unknown_routes_and_path_traversal (test_http.HttpTests.test_unknown_routes_and_path_traversal) ... ok
+test_archive_requires_zero_and_preserves_history (test_inventory.InventoryTests.test_archive_requires_zero_and_preserves_history) ... ok
+test_concurrent_exits_cannot_oversell (test_inventory.InventoryTests.test_concurrent_exits_cannot_oversell) ... ok
+test_create_and_initial_audit (test_inventory.InventoryTests.test_create_and_initial_audit) ... ok
+test_demo_seed_is_idempotent (test_inventory.InventoryTests.test_demo_seed_is_idempotent) ... ok
+test_duplicate_code_case_insensitive (test_inventory.InventoryTests.test_duplicate_code_case_insensitive) ... ok
+test_empty_state (test_inventory.InventoryTests.test_empty_state) ... ok
+test_entry_and_exit (test_inventory.InventoryTests.test_entry_and_exit) ... ok
+test_exit_exact_balance (test_inventory.InventoryTests.test_exit_exact_balance) ... ok
+test_insufficient_stock_rolls_back (test_inventory.InventoryTests.test_insufficient_stock_rolls_back) ... ok
+test_invalid_movements_do_not_change_balance (test_inventory.InventoryTests.test_invalid_movements_do_not_change_balance) ... ok
+test_invalid_product_fields (test_inventory.InventoryTests.test_invalid_product_fields) ... ok
+test_outdated_edit_is_rejected (test_inventory.InventoryTests.test_outdated_edit_is_rejected) ... ok
+test_read_repositories (test_inventory.InventoryTests.test_read_repositories) ... ok
+test_stock_limit (test_inventory.InventoryTests.test_stock_limit) ... ok
+test_summary_and_reopen_persistence (test_inventory.InventoryTests.test_summary_and_reopen_persistence) ... ok
+test_transaction_rolls_back_if_history_write_fails (test_inventory.InventoryTests.test_transaction_rolls_back_if_history_write_fails) ... ok
+test_update_preserves_balance (test_inventory.InventoryTests.test_update_preserves_balance) ... ok
+test_zero_stock_no_movement (test_inventory.InventoryTests.test_zero_stock_no_movement) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 4.817s
+
+OK

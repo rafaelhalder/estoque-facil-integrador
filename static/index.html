@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Controle local de produtos e movimentações de estoque.">
+  <title>Estoque Fácil | Visão geral</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-icon" aria-hidden="true">▦</span><span>estoque<span class="brand-light">fácil</span><small>CONTROLE COM CLAREZA</small></span></a>
+    <p class="nav-label">ESPAÇO DE TRABALHO</p>
+    <nav aria-label="Menu principal">
+      <a href="#overview" data-page="overview" aria-current="page"><span aria-hidden="true">◫</span>Visão geral</a>
+      <a href="#products" data-page="products"><span aria-hidden="true">▦</span>Produtos<span id="nav-count" class="nav-count">0</span></a>
+      <a href="#movements" data-page="movements"><span aria-hidden="true">⇄</span>Movimentações</a>
+    </nav>
+    <div class="sidebar-note"><span class="online-dot"></span> Aplicativo local<p>Seus dados ficam neste computador.</p></div>
+    <div class="sidebar-footer"><span class="avatar">EF</span><div>Estoque Fácil<small>Projeto acadêmico · v1.0</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">Meu estoque <span>/</span> <strong id="breadcrumb-title">Visão geral</strong></div><div class="topbar-right"><span id="mode-badge" class="mode-badge">Ambiente local</span><span id="today"></span></div></header>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><div><p class="eyebrow">SEU ESTOQUE, EM DIA</p><h1 id="page-title">Visão geral</h1><p id="page-description" class="muted">Acompanhe os produtos e saiba o que precisa de atenção.</p></div><button id="new-product" class="primary"><span aria-hidden="true">＋</span> Novo produto</button></div>
+      <div id="connection-error" class="error-banner" role="alert" hidden>Não foi possível carregar o estoque. Confira se o aplicativo está aberto no terminal. <button id="retry">Tentar novamente</button></div>
+      <section id="overview-page" aria-label="Visão geral do estoque">
+        <div class="metrics">
+          <article class="metric"><div class="metric-top">Produtos cadastrados<span aria-hidden="true">▦</span></div><strong id="metric-products">—</strong><p>Produtos ativos no catálogo</p></article>
+          <article class="metric"><div class="metric-top">Unidades em estoque<span aria-hidden="true">◈</span></div><strong id="metric-units">—</strong><p>Soma das quantidades cadastradas</p></article>
+          <article class="metric alert-metric"><div class="metric-top">Precisam de atenção<span aria-hidden="true">!</span></div><strong id="metric-low">—</strong><p>No mínimo ou abaixo do limite</p></article>
+          <article class="metric"><div class="metric-top">Valor do estoque<span aria-hidden="true">$</span></div><strong id="metric-value" class="money">—</strong><p>Saldo × preço unitário atual</p></article>
+        </div>
+        <div class="overview-grid">
+          <section class="panel attention-panel"><div class="panel-heading"><div><h2>Hora de repor</h2><p class="muted">Produtos que chegaram ao estoque mínimo.</p></div><span id="attention-count" class="count-badge">0 itens</span></div><div id="attention-list" class="attention-list"></div><button id="see-low" class="text-button">Ver produtos para reposição <span aria-hidden="true">→</span></button></section>
+          <section class="panel quick-panel"><p class="eyebrow">ROTINA MAIS SIMPLES</p><h2>Cada movimento<br>bem registrado.</h2><p>Registre entradas e saídas para manter o saldo atualizado e preservar o histórico.</p><button id="quick-movement" class="primary">Registrar movimentação <span aria-hidden="true">↗</span></button><div class="stack-art" aria-hidden="true"><div class="box box-back">EF</div><div class="box box-front">▦</div><div class="art-line"></div><span>ORGANIZAÇÃO QUE FAZ DIFERENÇA</span></div></section>
+        </div>
+        <section class="panel"><div class="panel-heading"><div><h2>Últimas movimentações</h2><p class="muted">As alterações mais recentes do seu estoque.</p></div><a class="text-button" href="#movements">Ver histórico <span aria-hidden="true">→</span></a></div><div id="recent-table" class="table-scroll"></div></section>
+      </section>
+      <section id="products-page" aria-label="Catálogo de produtos" hidden>
+        <div class="panel"><div class="table-toolbar"><div class="search-field"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Buscar por produto, código ou categoria" aria-label="Buscar produtos"></div><div class="toolbar-actions"><select id="product-status" aria-label="Filtrar situação do estoque"><option value="all">Todas as situações</option><option value="low">Precisam de reposição</option><option value="ok">Estoque em dia</option></select><a href="/api/export" class="secondary" download="estoque.csv">↓ Exportar CSV</a></div></div><div id="products-table" class="table-scroll"></div><div class="table-footer"><span id="products-result"></span><span>Arquivar preserva o histórico de movimentações.</span></div></div>
+      </section>
+      <section id="movements-page" aria-label="Histórico de movimentações" hidden>
+        <div class="panel"><div class="table-toolbar"><div class="search-field"><span aria-hidden="true">⌕</span><input id="movement-search" type="search" placeholder="Buscar produto, código ou observação" aria-label="Buscar movimentações"></div><div class="toolbar-actions"><select id="movement-kind" aria-label="Filtrar tipo de movimentação"><option value="all">Entradas e saídas</option><option value="entrada">Somente entradas</option><option value="saida">Somente saídas</option></select><button id="new-movement" class="primary">＋ Registrar movimentação</button></div></div><div id="movements-table" class="table-scroll"></div><div class="table-footer"><span id="movements-result"></span><span>Exibimos as 500 movimentações mais recentes.</span></div></div>
+      </section>
+      <footer class="main-footer"><span>Estoque Fácil</span><span id="sync-status" role="status">Conectando ao banco local…</span></footer>
+    </main>
+  </div>
+  <dialog id="product-dialog" aria-labelledby="product-dialog-title"><form id="product-form" novalidate>
+    <div class="dialog-heading"><div><p class="eyebrow">CATÁLOGO</p><h2 id="product-dialog-title">Novo produto</h2></div><button type="button" class="icon-button close-dialog" aria-label="Fechar cadastro">×</button></div>
+    <p class="muted dialog-description">Preencha os dados para organizar seu estoque.</p>
+    <div id="product-form-error" class="form-error" role="alert" hidden></div>
+    <div class="form-grid"><label class="span-2">Nome do produto<input name="name" required minlength="2" maxlength="100" placeholder="Ex.: Caderno universitário" autocomplete="off"></label>
+      <label>Código do produto<input name="sku" required minlength="2" maxlength="30" pattern="[A-Za-z0-9][A-Za-z0-9_-]+" placeholder="Ex.: PAP-004" autocomplete="off"><small>Letras, números, hífen ou sublinhado.</small></label>
+      <label>Categoria<input name="category" maxlength="50" placeholder="Ex.: Papelaria" autocomplete="off"></label>
+      <label>Unidade<select name="unit"><option value="un">Unidade (un)</option><option value="cx">Caixa (cx)</option><option value="pct">Pacote (pct)</option></select></label>
+      <label>Preço unitário (R$)<input name="price" type="text" inputmode="decimal" required placeholder="0,00" maxlength="12"></label>
+      <label id="initial-stock-label">Estoque inicial<input name="initial_stock" type="number" min="0" max="1000000" step="1" required value="0"></label>
+      <label>Estoque mínimo<input name="min_stock" type="number" min="0" max="1000000" step="1" required value="0"></label>
+    </div><p class="form-hint" id="product-hint">O saldo inicial será registrado como uma entrada no histórico.</p>
+    <div class="dialog-actions"><button type="button" class="secondary close-dialog">Cancelar</button><button type="submit" class="primary" id="save-product">Cadastrar produto</button></div>
+  </form></dialog>
+  <dialog id="movement-dialog" aria-labelledby="movement-dialog-title"><form id="movement-form" novalidate>
+    <div class="dialog-heading"><div><p class="eyebrow">MOVIMENTAÇÃO</p><h2 id="movement-dialog-title">Registrar movimentação</h2></div><button type="button" class="icon-button close-dialog" aria-label="Fechar movimentação">×</button></div>
+    <p class="muted dialog-description">O saldo será atualizado assim que você confirmar.</p><div id="movement-form-error" class="form-error" role="alert" hidden></div>
+    <fieldset class="kind-picker"><legend>Tipo de movimentação</legend><label><input type="radio" name="kind" value="entrada" checked><span>↙ Entrada</span></label><label><input type="radio" name="kind" value="saida"><span>↗ Saída</span></label></fieldset>
+    <label>Produto<select name="product_id" id="movement-product" required></select></label><div class="balance-note" id="movement-balance"></div>
+    <label>Quantidade<input name="quantity" type="number" min="1" max="1000000" step="1" required placeholder="Ex.: 10"></label>
+    <label>Observação <span class="optional">(opcional)</span><textarea name="note" rows="3" maxlength="250" placeholder="Ex.: Reposição de fornecedor ou saída para venda"></textarea></label>
+    <div class="dialog-actions"><button type="button" class="secondary close-dialog">Cancelar</button><button type="submit" class="primary" id="save-movement">Confirmar movimentação</button></div>
+  </form></dialog>
+  <dialog id="archive-dialog" aria-labelledby="archive-title"><form id="archive-form"><div class="dialog-heading"><h2 id="archive-title">Arquivar produto</h2><button type="button" class="icon-button close-dialog" aria-label="Fechar arquivamento">×</button></div><p id="archive-description"></p><p class="muted">O produto sairá do catálogo. Seu histórico será preservado. O arquivamento está disponível apenas para saldo zero.</p><div id="archive-form-error" class="form-error" role="alert" hidden></div><div class="dialog-actions"><button type="button" class="secondary close-dialog">Cancelar</button><button type="submit" class="danger" id="confirm-archive">Arquivar produto</button></div></form></dialog>
+  <div id="toast" role="status" class="toast" hidden></div>
+</body></html>
