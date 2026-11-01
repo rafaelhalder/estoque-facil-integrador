@@ -86,7 +86,7 @@ As outras sugestões e as decisões sobre cada uma estão registradas junto com 
 
 ## 4min40 a 5min00 - Encerramento
 
-[Mostrar o README e o repositório, quando ele estiver publicado.]
+[Mostrar o README e o repositório em https://github.com/rafaelhalder/estoque-facil-integrador.]
 
 “Esse é o Estoque Fácil. O sistema funciona localmente, em um computador, e ainda não tem login ou acesso pela internet.
 

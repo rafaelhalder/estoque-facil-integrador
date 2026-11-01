@@ -82,6 +82,8 @@ A tela carrega as últimas 500 movimentações, mas os registros anteriores cont
 
 O projeto começou do zero porque o trabalho anterior não estava disponível. Como a disciplina pede continuar o PIT I, ainda é preciso confirmar essa substituição com a tutoria.
 
-Também faltam a identificação acadêmica, as cinco avaliações reais, os ajustes que surgirem dessas avaliações, o vídeo narrado e o preenchimento do template oficial. O código e os textos foram preparados com apoio de IA e precisam ser revisados e compreendidos antes da apresentação. Nada foi enviado ao portal ou publicado no GitHub.
+Também faltam a identificação acadêmica, as cinco avaliações reais, os ajustes que surgirem dessas avaliações, o vídeo narrado e o preenchimento do template oficial. O código e os textos foram preparados com apoio de IA e precisam ser revisados e compreendidos antes da apresentação. O código está publicado em https://github.com/rafaelhalder/estoque-facil-integrador. A entrega ainda não foi enviada ao portal. O aplicativo continua sendo executado localmente.
+
+Repositório: **https://github.com/rafaelhalder/estoque-facil-integrador**.
 
 Veja o passo a passo em `docs/ENTREGA.md` e as instruções de versionamento em `docs/GIT_INSTRUCOES.md`.

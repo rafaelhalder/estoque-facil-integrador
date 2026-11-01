@@ -9,7 +9,7 @@ O sistema, os testes, os diagramas e o relatório estão no pacote. Esta lista a
 5. **Analisar o retorno.** Registre as sugestões em `REGISTRO_MELHORIAS.csv`, explique o que será alterado e confira as correções. Se decidir não fazer uma sugestão, registre o motivo.
 6. **Reunir os comprovantes.** Salve as cinco avaliações em PDF. Inclua capturas das falhas, quando houver.
 7. **Gravar a apresentação.** Use `ROTEIRO_VIDEO.md` como base e ajuste as palavras ao seu jeito. O material do curso traz duas durações diferentes: até cinco minutos em uma parte e pelo menos cinco em outra. Confirme isso com a tutoria.
-8. **Disponibilizar o código.** O pacote inclui `HISTORICO_GIT.bundle`, com o histórico local. Siga `GIT_INSTRUCOES.md` para recuperar o repositório e publicar no remoto que você escolher. O GitHub ainda não foi configurado.
+8. **Conferir o código publicado.** O repositório está em https://github.com/rafaelhalder/estoque-facil-integrador. Coloque esse endereço no template e confira o acesso. O pacote também inclui `HISTORICO_GIT.bundle`, com o histórico para uso local.
 9. **Montar o arquivo final.** Passe as informações para o template oficial e confira se os links, avaliações e vídeo estão acessíveis.
 10. **Enviar no portal.** O prazo consultado é **17/11/2026 às 23h59, horário de Brasília**. O pacote não faz esse envio automaticamente.
 

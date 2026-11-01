@@ -1,6 +1,6 @@
 # Como recuperar e publicar o projeto no Git
 
-O ZIP traz o código e o arquivo `HISTORICO_GIT.bundle`, que guarda uma cópia do repositório local. Ainda não existe um repositório remoto configurado para este projeto.
+O ZIP traz o código e o arquivo `HISTORICO_GIT.bundle`, que guarda uma cópia do repositório local. O repositório público está em https://github.com/rafaelhalder/estoque-facil-integrador. O link permite consultar o código e a documentação; ele não abre o sistema em funcionamento.
 
 ## Recuperar com o histórico
 
@@ -26,15 +26,15 @@ git commit -m "Adicionar projeto Estoque Facil"
 
 Se o Git pedir nome e e-mail, configure os seus dados antes do commit. A pasta `data`, os arquivos temporários e o próprio bundle ficam fora do versionamento pelo `.gitignore`.
 
-## Publicar no GitHub
+## Usar o repositório publicado
 
-Crie um repositório vazio no GitHub. Copie a URL mostrada por ele e use:
+Para conectar uma cópia local ao repositório do projeto, use:
 
 ```powershell
-git remote add origin URL_DO_REPOSITORIO_CRIADO
+git remote add origin https://github.com/rafaelhalder/estoque-facil-integrador.git
 git push -u origin main
 ```
 
-Troque `URL_DO_REPOSITORIO_CRIADO` pela URL real. Confira se a tutoria terá acesso e coloque o link no template da entrega. Revise os arquivos antes de publicar para não enviar senhas, bancos pessoais ou dados de clientes.
+Se o remoto origin já existir, confira o endereço com `git remote -v` antes de alterar qualquer configuração. O repositório é público e pode ser consultado pela tutoria. Coloque o link no template da entrega. Revise os arquivos antes de publicar para não enviar senhas, bancos pessoais ou dados de clientes.
 
 Os commits de preparação estão identificados como Codex, pois houve apoio do assistente na implementação e nos textos. O histórico mantém essa informação; a revisão do material e as regras de autoria da instituição continuam fazendo parte da preparação da entrega.
