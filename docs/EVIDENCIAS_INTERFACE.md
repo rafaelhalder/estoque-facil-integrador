@@ -1,6 +1,6 @@
-# Verificação funcional da interface
+# Conferência da interface
 
-Data: 01/11/2026. Ambiente: Google Chrome no Windows. Verificação técnica realizada pelo assistente, em base exclusiva de QA, com dados fictícios. Não corresponde a avaliação de um colega ou profissional convidado.
+Data: 01/11/2026. Ambiente: Google Chrome no Windows. Conferência técnica feita pelo assistente, com dados fictícios em uma base separada para testes (QA). As cinco avaliações de colegas ou profissionais ainda não foram feitas.
 
 | Caso | Procedimento e resultado observado |
 | --- | --- |
@@ -17,6 +17,6 @@ Data: 01/11/2026. Ambiente: Google Chrome no Windows. Verificação técnica rea
 | UI11 | Inspecionar painel em largura de 390 pixels: navegação reorganizada no topo e indicadores em duas colunas. Captura em imagens/celular.jpg. |
 | UI12 | Abrir formulário de avaliação vazio: dez tarefas e campos de relato renderizados sem respostas fictícias. |
 
-As capturas painel.jpg e produtos.jpg mostram os dados de demonstração antes e depois do arquivamento do item temporário. O cadastro temporário não está no banco padrão de quem extrair o ZIP, pois os bancos de QA não acompanham a distribuição.
+As imagens painel.jpg e produtos.jpg mostram a demonstração antes e depois do teste de arquivamento. O produto criado no teste não vai aparecer para quem abrir o ZIP: o banco de QA fica fora do pacote.
 
-A exportação CSV foi verificada pelos testes de integração HTTP. A impressão do formulário, avaliações de cinco pessoas e o vídeo narrado ainda dependem de execução pelo aluno. Não foi realizada auditoria completa de acessibilidade nem teste em todos os navegadores.
+Os testes da API conferiram a exportação CSV. Ainda faltam as cinco avaliações reais, a impressão dos formulários e o vídeo narrado. A conferência não cobre todos os navegadores nem substitui uma avaliação completa de acessibilidade.

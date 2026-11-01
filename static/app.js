@@ -8,6 +8,7 @@ let state = {products: [], movements: [], summary: {products: 0, units: 0, low_s
 let editing = null, archiving = null, toastTimer, loading = false, busy = false;
 
 function element(tag, text, className) {
+  // Mostra o conteúdo como texto, sem interpretar o que foi digitado como HTML.
   const node = document.createElement(tag);
   if (text !== undefined) node.textContent = text;
   if (className) node.className = className;
@@ -21,6 +22,7 @@ function toast(message, error = false) {
   toastTimer = setTimeout(() => { $('#toast').hidden = true; }, 5000);
 }
 async function api(path, options = {}) {
+  // Se a resposta demorar, o usuário confere o histórico antes de repetir o envio.
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 12000);
   try {
@@ -183,6 +185,7 @@ function openArchive(product) {
   $('#archive-dialog').showModal();
 }
 async function submit(form, button, kind, callback) {
+  // Bloqueia outro clique enquanto o mesmo formulário está sendo enviado.
   if (busy) return;
   formError(kind, '');
   if (!form.reportValidity()) return;

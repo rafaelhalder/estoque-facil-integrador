@@ -1,4 +1,4 @@
-"""Testes de regras de negócio com SQLite real em diretório temporário."""
+"""Testa as regras de estoque em um banco SQLite temporário."""
 import sqlite3
 import tempfile
 import unittest

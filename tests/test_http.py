@@ -1,4 +1,4 @@
-"""Testes de integração usando servidor HTTP e banco temporário reais."""
+"""Testa a API com um servidor local e um banco temporário."""
 import csv
 import http.client
 import io

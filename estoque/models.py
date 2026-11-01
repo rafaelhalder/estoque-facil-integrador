@@ -1,4 +1,4 @@
-"""Persistência SQLite. Cada operação abre sua própria conexão."""
+"""Acesso ao SQLite. Cada operação usa e fecha sua própria conexão."""
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
@@ -44,7 +44,7 @@ class Database:
         connection.execute('PRAGMA foreign_keys=ON')
         try:
             if write:
-                # Serializa saldo e histórico para impedir saídas concorrentes indevidas.
+                # Processa uma escrita por vez para evitar saídas acima do saldo.
                 connection.execute('BEGIN IMMEDIATE')
             yield connection
             connection.commit()
@@ -61,7 +61,7 @@ class Database:
             connection.executescript(SCHEMA)
 
     def seed_demo(self):
-        """Carga fictícia, executada uma única vez e apenas em base vazia."""
+        """Insere os produtos de exemplo uma vez, apenas se a base estiver vazia."""
         with self.connect(write=True) as connection:
             if connection.execute('SELECT 1 FROM settings WHERE key=?', ('demo_seeded',)).fetchone():
                 return
@@ -84,7 +84,7 @@ class Database:
 
 
 class ProductRepository:
-    """Consultas de leitura do catálogo e do histórico."""
+    """Consultas para listar produtos e movimentações."""
     def __init__(self, database):
         self.database = database
 

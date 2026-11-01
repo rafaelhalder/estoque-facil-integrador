@@ -1,4 +1,4 @@
-"""Controlador HTTP local e entrega dos arquivos da camada de apresentação."""
+"""Recebe os pedidos da interface e envia as páginas e os dados."""
 import csv
 import io
 import json
@@ -12,7 +12,7 @@ from .services import InventoryService, AppError
 
 def csv_cell(value):
     value = str(value)
-    # Evita interpretação de dados de usuário como fórmulas em planilhas.
+    # Evita que um texto cadastrado seja executado como fórmula na planilha.
     return "'" + value if value.lstrip().startswith(('=', '+', '-', '@')) else value
 
 

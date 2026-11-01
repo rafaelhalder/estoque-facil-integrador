@@ -1,5 +1,5 @@
-# Situação 2 — Construção da solução
+# Situação 2 - Construção do sistema
 
-O front-end está em `../../static`. O controlador, as regras de negócio e o modelo estão em `../../estoque`. A inicialização fica em `../../app.py`.
+As telas ficam em `../../static`. O Python fica em `../../estoque`, separado entre controlador, regras e banco de dados. O arquivo `../../app.py` abre o aplicativo.
 
-O manual de execução está no README principal e no relatório técnico. O banco SQLite é criado automaticamente. A versão funciona localmente, sem dependências externas de Python.
+O README principal e o relatório mostram como executar e usar o sistema. O banco SQLite é criado na primeira execução. Não precisa instalar bibliotecas extras de Python.

@@ -1,4 +1,4 @@
-"""Regras de negócio e transações; independente de HTTP e da interface."""
+"""Confere os dados e aplica as regras de estoque, sem depender das telas."""
 import re
 import sqlite3
 from decimal import Decimal, InvalidOperation
@@ -60,7 +60,7 @@ class InventoryService:
         self.repository = ProductRepository(database)
 
     def snapshot(self):
-        # Uma única transação de leitura mantém resumo, catálogo e histórico consistentes.
+        # Lê tudo na mesma transação para o resumo bater com o catálogo e o histórico.
         with self.database.connect() as connection:
             connection.execute('BEGIN')
             products = [dict(row) for row in connection.execute('SELECT * FROM products WHERE active=1 ORDER BY name COLLATE NOCASE')]

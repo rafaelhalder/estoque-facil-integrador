@@ -1,1 +1,1 @@
-"""Camadas de modelo, serviço e controle do Estoque Fácil."""
+"""Código de banco, regras e rotas do Estoque Fácil."""

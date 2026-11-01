@@ -1,4 +1,4 @@
-"""Estoque Fácil: aplicação acadêmica local, sem dependências externas."""
+"""Abre o Estoque Fácil no computador, sem instalar bibliotecas extras."""
 import argparse
 import threading
 import webbrowser

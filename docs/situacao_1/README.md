@@ -1,5 +1,7 @@
-# Situação 1 — Planejamento e modelagem
+# Situação 1 - Planejamento e modelagem
 
-Consulte as seções de planejamento, requisitos, casos de uso, classes, sequência, atividade e banco de dados em `../RELATORIO_TECNICO.pdf` ou na versão HTML. Os diagramas editáveis estão em `../diagramas.mmd`; o esquema físico está em `../schema.sql`.
+O relatório em `../RELATORIO_TECNICO.pdf` e na versão HTML explica o problema, o que o sistema faz e como ele foi organizado. Ali estão os requisitos e os diagramas de casos de uso, classes, sequência, atividade e banco de dados.
 
-Esta base foi iniciada do zero; não é uma revisão de um projeto anterior disponível. A aceitação dessa substituição precisa ser confirmada com a tutoria.
+Para editar os diagramas, use `../diagramas.mmd`. A estrutura das tabelas está em `../schema.sql`.
+
+Esta base começou do zero. Como o enunciado pede continuar um projeto anterior, ainda falta confirmar essa substituição com a tutoria.
