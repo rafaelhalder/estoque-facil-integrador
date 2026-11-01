@@ -1,6 +1,6 @@
 # Como recuperar e publicar o projeto no Git
 
-O ZIP traz o código e o arquivo `HISTORICO_GIT.bundle`, que guarda uma cópia do repositório local. O repositório público está em https://github.com/rafaelhalder/estoque-facil-integrador. O link permite consultar o código e a documentação; ele não abre o sistema em funcionamento.
+O ZIP traz o código e o arquivo `HISTORICO_GIT.bundle`, que guarda uma cópia do repositório local. O repositório público está em https://github.com/rafaelhalder/estoque-facil-integrador. Esse link abre o código e a documentação. A demonstração em funcionamento está em https://estoque-facil-rafael-testes.wryriver35.chatgpt.site. O código da adaptação online fica em online/.
 
 ## Recuperar com o histórico
 

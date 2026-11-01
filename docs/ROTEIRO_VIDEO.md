@@ -88,7 +88,7 @@ As outras sugestões e as decisões sobre cada uma estão registradas junto com 
 
 [Mostrar o README e o repositório em https://github.com/rafaelhalder/estoque-facil-integrador.]
 
-“Esse é o Estoque Fácil. O sistema funciona localmente, em um computador, e ainda não tem login ou acesso pela internet.
+“Esse é o Estoque Fácil. A versão local roda em Python. Também deixei uma demonstração online, com um estoque de teste separado pra cada conta, pra facilitar a avaliação das cinco pessoas.
 
 O pacote reúne o código, os diagramas, o manual e os testes. A proposta é manter o controle de estoque simples e deixar cada movimentação fácil de conferir.
 

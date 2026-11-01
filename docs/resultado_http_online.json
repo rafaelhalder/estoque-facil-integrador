@@ -1,0 +1,16 @@
+{
+  "verificacoes": 10,
+  "falhas": 0,
+  "itens": [
+    "API anônima bloqueada com 401",
+    "Entrada local e tela de estoque",
+    "Escrita de outra origem bloqueada com 403",
+    "Tipo de corpo inválido bloqueado com 415",
+    "Corpo maior que 16 KB bloqueado com 413",
+    "Cadastro e saldo inicial persistidos no D1 local",
+    "Duas saídas HTTP concorrentes: uma aprovada e uma bloqueada",
+    "Saldo e histórico coerentes após concorrência",
+    "CSV exportado com dados do participante",
+    "Formulário de avaliação acessível"
+  ]
+}

@@ -15,7 +15,9 @@ O sistema, os testes, os diagramas e o relatório estão no pacote. Esta lista a
 
 ## Como organizar as avaliações
 
-Cada pessoa pode usar uma cópia local do projeto. Também dá para acompanhar a avaliação no seu computador. O aplicativo não aceita acesso de outras máquinas pela rede.
+Envie o link https://estoque-facil-rafael-testes.wryriver35.chatgpt.site para cinco colegas ou profissionais da área. Cada pessoa entra com sua conta do ChatGPT, usa o próprio estoque de teste e abre o formulário no site. Ela salva a avaliação em PDF e envia para você pelo meio combinado. O formulário não envia respostas automaticamente.
+
+O passo a passo e uma mensagem pronta estão em `TESTE_COM_CINCO_PESSOAS.md`. Quem preferir também pode usar uma cópia local; os bancos local e online são separados.
 
 Peça para cadastrar um produto, editar o nome, registrar uma entrada, fazer uma saída válida e tentar uma saída maior que o saldo. Depois, peça para buscar um produto, filtrar os itens para reposição, consultar o histórico e exportar o CSV.
 

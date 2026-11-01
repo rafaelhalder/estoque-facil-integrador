@@ -2,7 +2,11 @@
 
 O Estoque Fácil é um sistema simples para cadastrar produtos e controlar o que entra e sai do estoque. Ele mostra o saldo de cada item, avisa quando está na hora de repor e guarda o histórico das movimentações.
 
-O projeto usa Python, SQLite, HTML, CSS e JavaScript. Funciona no próprio computador, sem precisar de internet, conta em serviço pago ou instalação de bibliotecas extras.
+A versão local usa Python, SQLite, HTML, CSS e JavaScript. Funciona no próprio computador, sem precisar de internet ou instalação de bibliotecas extras.
+
+Também há uma demonstração online para os avaliadores: **https://estoque-facil-rafael-testes.wryriver35.chatgpt.site**. Cada pessoa entra com sua conta do ChatGPT e recebe um estoque de teste separado. O formulário fica em **https://estoque-facil-rafael-testes.wryriver35.chatgpt.site/avaliacao.html**.
+
+A adaptação online está na pasta `online/` e usa TypeScript, Vinext e banco D1. Ela reaproveita a interface e os fluxos do projeto; o servidor Python da versão local continua separado. Veja `docs/TESTE_COM_CINCO_PESSOAS.md`.
 
 ## Como abrir
 
@@ -72,7 +76,7 @@ Os 26 testes da versão 1.0 passaram na execução registrada em `docs/EVIDENCIA
 
 O relatório está em PDF e HTML, dentro de `docs`. A mesma pasta contém os diagramas, o roteiro de apresentação e `VALIDACAO_USUARIOS.html`, um formulário para cada uma das cinco pessoas que ainda precisam avaliar o sistema. O formulário permite salvar a resposta em JSON ou imprimir em PDF.
 
-## Limites desta versão
+## Limites da versão local
 
 O aplicativo foi preparado para uma pessoa usar em um único computador. Ele não tem login, acesso pela rede, sincronização entre máquinas ou integração fiscal. O servidor só recebe conexões em `127.0.0.1`; esta versão não deve ser publicada diretamente na internet.
 
@@ -82,7 +86,7 @@ A tela carrega as últimas 500 movimentações, mas os registros anteriores cont
 
 O projeto começou do zero porque o trabalho anterior não estava disponível. Como a disciplina pede continuar o PIT I, ainda é preciso confirmar essa substituição com a tutoria.
 
-Também faltam a identificação acadêmica, as cinco avaliações reais, os ajustes que surgirem dessas avaliações, o vídeo narrado e o preenchimento do template oficial. O código e os textos foram preparados com apoio de IA e precisam ser revisados e compreendidos antes da apresentação. O código está publicado em https://github.com/rafaelhalder/estoque-facil-integrador. A entrega ainda não foi enviada ao portal. O aplicativo continua sendo executado localmente.
+Também faltam a identificação acadêmica, as cinco avaliações reais, os ajustes que surgirem dessas avaliações, o vídeo narrado e o preenchimento do template oficial. O código e os textos foram preparados com apoio de IA e precisam ser revisados e compreendidos antes da apresentação. O código está publicado em https://github.com/rafaelhalder/estoque-facil-integrador. A entrega ainda não foi enviada ao portal. A demonstração online também está disponível no link acima.
 
 Repositório: **https://github.com/rafaelhalder/estoque-facil-integrador**.
 
