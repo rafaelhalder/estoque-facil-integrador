@@ -1,6 +1,6 @@
 # Conferência da interface
 
-Data: 01/11/2026. Ambiente: Google Chrome no Windows. Conferência técnica feita pelo assistente, com dados fictícios em uma base separada para testes (QA). As cinco avaliações de colegas ou profissionais ainda não foram feitas.
+Data: 01/11/2026. Ambiente: Google Chrome no Windows. Conferência técnica feita pelo assistente, com dados fictícios em uma base separada para testes (QA). As avaliações recebidas depois desta conferência estão em `avaliacoes/AVALIACOES_ESTOQUE_FACIL.pdf`.
 
 | Caso | Procedimento e resultado observado |
 | --- | --- |
@@ -19,4 +19,4 @@ Data: 01/11/2026. Ambiente: Google Chrome no Windows. Conferência técnica feit
 
 As imagens painel.jpg e produtos.jpg mostram a demonstração antes e depois do teste de arquivamento. O produto criado no teste não vai aparecer para quem abrir o ZIP: o banco de QA fica fora do pacote.
 
-Os testes da API conferiram a exportação CSV. Ainda faltam as cinco avaliações reais, a impressão dos formulários e o vídeo narrado. A conferência não cobre todos os navegadores nem substitui uma avaliação completa de acessibilidade.
+Os testes da API conferiram a exportação CSV. Esta conferência técnica tem alcance limitado ao ambiente e às tarefas registrados acima.

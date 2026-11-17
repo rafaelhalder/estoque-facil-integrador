@@ -1,1 +1,3 @@
-Data;Avaliador ou origem;Problema observado;Reprodução;Decisão e justificativa;Correção realizada;Teste de confirmação;Status
+﻿Data;Avaliador ou origem;Problema observado;Reprodução;Decisão e justificativa;Correção realizada;Teste de confirmação;Status
+05/11/2026;Avaliador 1;Sugestão de modo escuro;O parecer não descreve falha reproduzível.;Avaliar em próxima versão, pois afeta contraste e legibilidade em todas as telas.;Nenhuma alteração aplicada.;Conferir contraste, foco e estados das telas se implementado.;Melhoria futura
+12/11/2026;Avaliador 5;Sugestão de campos mais minimalistas;O parecer não aponta um campo específico ou falha reproduzível.;Revisar cadastro e movimentações em próxima versão, preservando rótulos e instruções.;Nenhuma alteração aplicada.;Conferir cadastro e movimentações com teclado e em tela pequena se implementado.;Melhoria futura

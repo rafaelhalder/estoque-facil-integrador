@@ -74,7 +74,7 @@ python -m unittest discover -s tests -v
 
 Os 26 testes da versão 1.0 passaram na execução registrada em `docs/EVIDENCIAS_TESTES.txt`. Eles verificam cadastro, saldo, histórico, banco e API. A conferência feita no navegador está em `docs/EVIDENCIAS_INTERFACE.md`.
 
-O relatório está em PDF e HTML, dentro de `docs`. A mesma pasta contém os diagramas, o roteiro de apresentação e `VALIDACAO_USUARIOS.html`, um formulário para cada uma das cinco pessoas que ainda precisam avaliar o sistema. O formulário permite salvar a resposta em JSON ou imprimir em PDF.
+O relatório está em PDF e HTML, dentro de `docs`. A mesma pasta contém os diagramas e o roteiro de apresentação. Os cinco formulários recebidos foram reunidos no pacote de entrega para o AVA. As sugestões de interface estão no registro de melhorias.
 
 ## Limites da versão local
 
@@ -86,7 +86,7 @@ A tela carrega as últimas 500 movimentações, mas os registros anteriores cont
 
 O projeto começou do zero porque o trabalho anterior não estava disponível. Como a disciplina pede continuar o PIT I, ainda é preciso confirmar essa substituição com a tutoria.
 
-Também faltam a identificação acadêmica, as cinco avaliações reais, os ajustes que surgirem dessas avaliações, o vídeo narrado e o preenchimento do template oficial. O código e os textos foram preparados com apoio de IA e precisam ser revisados e compreendidos antes da apresentação. O código está publicado em https://github.com/rafaelhalder/estoque-facil-integrador. A entrega ainda não foi enviada ao portal. A demonstração online também está disponível no link acima.
+O modelo oficial foi preenchido com a identificação acadêmica, os links, os cinco pareceres e o laudo de qualidade. A versão de entrega não inclui vídeo, e essa ausência está indicada no modelo. O vídeo é um item exigido pela atividade e vale 30% da nota. O código e os textos foram preparados com apoio de IA e devem ser compreendidos pelo aluno. Os formulários completos acompanham o pacote para o AVA; os dados dos avaliadores não estão no GitHub. A entrega ainda precisa ser enviada ao portal.
 
 Repositório: **https://github.com/rafaelhalder/estoque-facil-integrador**.
 

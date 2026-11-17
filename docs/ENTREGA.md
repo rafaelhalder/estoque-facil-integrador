@@ -1,16 +1,16 @@
-# O que falta para entregar
+# Conferência da entrega
 
 O sistema, os testes, os diagramas e o relatório estão no pacote. Esta lista ajuda a fechar a entrega do Integrador.
 
 1. **Confirmar o projeto com a tutoria.** O enunciado pede continuar o PIT I. Como o trabalho anterior não estava disponível, esta versão começou do zero.
-2. **Preencher a identificação.** Informe RGM, instituição e polo no template oficial.
+2. **Identificação preenchida.** Nome, RGM e polo constam no modelo oficial. O relatório também foi atualizado.
 3. **Rodar e revisar o sistema.** Confira os fluxos, leia o código e tire as dúvidas antes de apresentar. Veja também as regras da instituição sobre o uso de IA.
-4. **Pedir cinco avaliações.** Convide cinco colegas ou profissionais da área. Cada pessoa precisa usar o aplicativo e preencher `VALIDACAO_USUARIOS.html` com o que funcionou, o que falhou e as sugestões.
-5. **Analisar o retorno.** Registre as sugestões em `REGISTRO_MELHORIAS.csv`, explique o que será alterado e confira as correções. Se decidir não fazer uma sugestão, registre o motivo.
-6. **Reunir os comprovantes.** Salve as cinco avaliações em PDF. Inclua capturas das falhas, quando houver.
-7. **Gravar a apresentação.** Use `ROTEIRO_VIDEO.md` como base e ajuste as palavras ao seu jeito. O material do curso traz duas durações diferentes: até cinco minutos em uma parte e pelo menos cinco em outra. Confirme isso com a tutoria.
+4. **Cinco avaliações recebidas.** Os formulários indicam 50 tarefas concluídas e nenhuma falha funcional relatada.
+5. **Retorno analisado.** As sugestões de modo escuro e campos mais minimalistas ficaram para uma próxima versão. Veja as decisões em `REGISTRO_MELHORIAS.csv`.
+6. **Pareceres reunidos.** O PDF com as cinco respostas está em `avaliacoes/AVALIACOES_ESTOQUE_FACIL.pdf`. Os JSONs originais estão em `avaliacoes/originais-json/`. Os formulários vieram sem capturas.
+7. **Vídeo ausente nesta entrega.** O modelo sem vídeo registra a ausência nos dois campos correspondentes. Esse item é exigido e representa 30% da nota. Os demais critérios somam, no máximo, 70%; a aprovação depende da correção da tutoria.
 8. **Conferir o código publicado.** O repositório está em https://github.com/rafaelhalder/estoque-facil-integrador. Coloque esse endereço no template e confira o acesso. O pacote também inclui `HISTORICO_GIT.bundle`, com o histórico para uso local.
-9. **Montar o arquivo final.** Passe as informações para o template oficial e confira se os links, avaliações e vídeo estão acessíveis.
+9. **Modelo oficial preenchido.** Use `Modelo-Oficial-Integrador-II-Estoque-Facil-Sem-Video.docx`. Os links do repositório, do sistema e do formulário responderam na conferência de 17/11/2026. Os 26 testes locais passaram novamente nessa data. Os pareceres completos ficam no pacote para o AVA, sem publicação dos dados dos avaliadores no GitHub.
 10. **Enviar no portal.** O prazo consultado é **17/11/2026 às 23h59, horário de Brasília**. O pacote não faz esse envio automaticamente.
 
 ## Como organizar as avaliações

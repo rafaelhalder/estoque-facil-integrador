@@ -12,7 +12,7 @@ A interface e os fluxos de cadastro, edição, entrada, saída, histórico, busc
 
 Cada consulta e alteração verifica a conta do participante no servidor. O saldo e o lançamento são atualizados juntos, por uma operação SQL com gatilho. Edições verificam a versão do registro. O ambiente permite até 200 produtos e 10.000 movimentos por participante e exibe as 500 movimentações mais recentes.
 
-Esta é uma demonstração acadêmica. Use dados fictícios. As avaliações de cinco colegas ou profissionais continuam pendentes e não são substituídas pelos testes técnicos.
+Esta é uma demonstração acadêmica. Use dados fictícios. O pacote de entrega para o AVA contém os cinco formulários recebidos; os dados dos avaliadores não são publicados neste repositório.
 
 ## Rodar e conferir
 
